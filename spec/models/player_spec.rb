@@ -8,6 +8,7 @@ describe Player do
 
   it { should respond_to :first_name }
   it { should respond_to :last_name }
+  it { should respond_to :roster_spots }
   it { should be_valid }
 
   describe "when first_name is missing" do

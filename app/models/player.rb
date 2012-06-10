@@ -3,4 +3,7 @@ class Player < ActiveRecord::Base
 
   validates :first_name, presence: true, length: { maximum: 30 }
   validates :last_name, presence: true, length: { maximum: 30 }
+
+  has_many :roster_spots, :class_name => "Roster"
+
 end
