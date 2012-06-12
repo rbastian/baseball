@@ -1,10 +1,12 @@
 ActiveAdmin.register Roster do
+  filter :team
   filter :player
 
   index do
     column "Id", :sortable => :id  do | roster |
       link_to roster.id, admin_roster_path(roster)
     end
+    column :team
     column "Jersey", :sortable => :jersey_number do | roster |
       link_to roster.jersey_number, admin_player_path(roster.player)
     end
@@ -16,6 +18,7 @@ ActiveAdmin.register Roster do
 
   form do | f |
     f.inputs do 
+      f.input :team
       f.input :player
       f.input :jersey_number
     end

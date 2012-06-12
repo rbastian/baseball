@@ -1,13 +1,15 @@
 require 'spec_helper'
 
 describe Roster do
+  let(:team) { Team.create(name: "Cardinals", year: "2012") }
   let(:player) { Player.create(first_name: "Skip", last_name: "Bastian") }
-  let(:roster) { Roster.create(player_id: player.id, jersey_number: 1) }
+  let(:roster) { Roster.create(team: team, player: player, jersey_number: 1) }
   
   subject { roster }
 
   it { should respond_to :jersey_number } 
   it { should respond_to :player }
+  it { should respond_to :team }
   it { should be_valid }
 
   describe "when player_id is missing" do

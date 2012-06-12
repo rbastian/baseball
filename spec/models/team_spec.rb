@@ -28,4 +28,5 @@ describe Team do
     before { team.year = "a" * 5 }
     it { should_not be_valid }
   end
+
 end
