@@ -13,6 +13,9 @@ ActiveAdmin.register Roster do
     column "Player" do | roster | 
       link_to roster.player.first_name, admin_player_path(roster.player)
     end
+    column "Picture" do | roster | 
+      image_tag roster.image_url.url(:thumb)
+    end
     default_actions
   end
 
@@ -21,6 +24,7 @@ ActiveAdmin.register Roster do
       f.input :team
       f.input :player
       f.input :jersey_number
+      f.input :image_url
     end
     f.buttons
   end

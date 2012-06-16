@@ -10,6 +10,7 @@ describe Roster do
   it { should respond_to :jersey_number } 
   it { should respond_to :player }
   it { should respond_to :team }
+  it { should respond_to :image_url }
   it { should be_valid }
 
   describe "when player_id is missing" do

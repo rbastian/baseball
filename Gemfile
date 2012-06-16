@@ -4,6 +4,7 @@ gem 'rails', '3.2.5'
 gem 'mysql2'
 gem 'jquery-rails'
 gem 'activeadmin', '0.4.4'
+gem 'rmagick'
 gem 'carrierwave', '0.6.2'
 
 group :development, :test do
